@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, CheckCircle2, Building2, BrainCircuit, ArrowUpRight } from 'lucide-react';
+import { User, CheckCircle2, ShieldAlert, Cpu, HeartPulse, Lock, ArrowUpRight } from 'lucide-react';
 import { personalInfo, fullstackData } from '../data/portfolioData';
 
 export default function About() {
@@ -14,7 +14,7 @@ export default function About() {
             <span>Sobre Mim & Perfil Profissional</span>
           </div>
           <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl tracking-tight">
-            Combinando rigor técnico com foco em interfaces fluidas e APIs robustas.
+            Engenharia de software focada em Java (Spring Boot), React, Python e conformidade de dados.
           </h2>
         </div>
 
@@ -44,7 +44,7 @@ export default function About() {
               </div>
               <div className="flex items-center gap-2 rounded-lg bg-slate-900/80 p-3 border border-slate-800 text-slate-300">
                 <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0" />
-                <span>Foco: Entregas de Alto Impacto</span>
+                <span>Especialidades: Java 17, Spring Boot, React & Python</span>
               </div>
             </div>
           </div>
@@ -52,49 +52,49 @@ export default function About() {
           {/* Highlight Cards on the Right */}
           <div className="lg:col-span-5 space-y-4">
             
-            {/* TCM-GO Spotlight */}
-            <div className="relative overflow-hidden rounded-2xl border border-purple-500/20 bg-gradient-to-br from-slate-900 to-slate-950 p-6 shadow-xl">
+            {/* MediClin Spotlight */}
+            <div className="relative overflow-hidden rounded-2xl border border-purple-500/30 bg-gradient-to-br from-slate-900 to-slate-950 p-6 shadow-xl">
               <div className="flex items-center gap-3 mb-3">
                 <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
-                  <Building2 className="h-5 w-5" />
+                  <HeartPulse className="h-5 w-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white text-base">TCM-GO Portal do Cidadão</h3>
-                  <span className="text-xs text-slate-400">Tribunal de Contas dos Municípios (Goiás)</span>
+                  <h3 className="font-bold text-white text-base">MediClin · Gestão Hospitalar</h3>
+                  <span className="text-xs text-slate-400">Java 17 • Spring Boot 3 • React 18 • MySQL 8.0</span>
                 </div>
               </div>
 
               <p className="text-xs text-slate-300 leading-relaxed">
-                Atuação direta na concepção frontend da aba 'Meio Ambiente' no Novo Portal do Cidadão. Foco em UX responsiva, consumo eficiente de APIs públicas e navegação amigável para permitir o acompanhamento dos gastos e conformidade ambiental em Goiás.
+                Sistema corporativo de prontuário eletrônico (PEP), agendamentos em tempo real sem conflito de horário, emissão de PDFs timbrados e conformidade estrita com as normas da LGPD e CFM.
               </p>
 
               <div className="mt-4 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
-                <span className="font-mono text-emerald-400 font-semibold">246 Municípios Atendidos</span>
+                <span className="font-mono text-emerald-400 font-semibold">Docker Compose & Flyway</span>
                 <a
-                  href="https://portalcidadao.tcmgo.tc.br/new-portal-cidadao/"
+                  href="https://github.com/cezarbtw/Projeto-Medicos"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-1 text-purple-400 hover:text-white transition-colors"
                 >
-                  <span>Ver Portal Oficial</span>
+                  <span>Ver no GitHub</span>
                   <ArrowUpRight className="h-3.5 w-3.5" />
                 </a>
               </div>
             </div>
 
-            {/* AI / Machine Learning Spotlight */}
+            {/* Cripto EmotionLens Spotlight */}
             <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
               <div className="flex items-center gap-3 mb-2">
                 <div className="p-2 rounded-lg bg-teal-500/10 text-teal-400 border border-teal-500/20">
-                  <BrainCircuit className="h-4 w-4" />
+                  <Lock className="h-4 w-4" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white text-sm">Pesquisa & IA Aplicada</h4>
-                  <span className="text-[11px] text-slate-400">YOLOv8 & Visão Computacional</span>
+                  <h4 className="font-semibold text-white text-sm">Cripto EmotionLens</h4>
+                  <span className="text-[11px] text-slate-400">FastAPI • PyTorch • YOLOv8 • React 18</span>
                 </div>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Desenvolvo sistemas desktop completos conectando modelos de redes neurais profundas (YOLOv8) com interfaces gráficas em Python/PyQt5 para inspeção estrutural automatizada.
+                Plataforma com visão computacional para telemetria de microexpressões faciais em tempo real, aliada a uma camada autoral de criptografia de alta velocidade para proteção de dados biométricos.
               </p>
             </div>
 

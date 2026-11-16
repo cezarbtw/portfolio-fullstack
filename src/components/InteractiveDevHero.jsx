@@ -1,65 +1,60 @@
 import React, { useState } from 'react';
-import { Terminal, Play, CheckCircle2, Copy, FileCode, Check } from 'lucide-react';
+import { Terminal, Play, CheckCircle2, Copy, Check } from 'lucide-react';
 
 export default function InteractiveDevHero() {
-  const [activeTab, setActiveTab] = useState('component');
+  const [activeTab, setActiveTab] = useState('java');
   const [isRunning, setIsRunning] = useState(false);
   const [apiResponse, setApiResponse] = useState(null);
   const [copied, setCopied] = useState(false);
 
   const codeSnippets = {
-    component: `// Frontend: Componente Reativo da Aba Meio Ambiente
-export function MunicipalEnvironmentCard({ municipality, metrics }) {
-  const [isAudited, setIsAudited] = useState(true);
+    java: `// Backend: MediClin - Spring Boot 3 Controller
+@RestController
+@RequestMapping("/api/v1/consultas")
+@SecurityRequirement(name = "bearer-jwt")
+public class ConsultaController {
+
+    @Autowired
+    private AgendaDeConsultas agenda;
+
+    @PostMapping
+    @Transactional
+    public ResponseEntity agendar(@RequestBody @Valid DadosAgendamentoConsulta dados) {
+        // Executa cadeia de validadores Spring (anti-choque de horário e antecedência)
+        var dto = agenda.agendar(dados);
+        return ResponseEntity.status(HttpStatus.CREATED).body(dto);
+    }
+}`,
+    react: `// Frontend: MediClin - Agendamento Reativo em React 18
+export function GradeAgendamento({ medicos, onAgendar }) {
+  const [selectedSlot, setSelectedSlot] = useState(null);
+
+  const handleConfirm = async () => {
+    const payload = { medicoId: selectedSlot.medicoId, data: selectedSlot.hora };
+    const response = await api.post('/api/v1/consultas', payload);
+    if (response.status === 201) {
+      toast.success('Consulta agendada e prontuário sincronizado!');
+    }
+  };
 
   return (
-    <div className="rounded-xl border border-purple-500/30 bg-slate-900/80 p-5 shadow-xl">
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg font-bold text-white">{municipality.name}</h3>
-        <span className="rounded-full bg-emerald-500/10 px-3 py-1 text-xs text-emerald-400">
-          Regularidade 100%
-        </span>
-      </div>
-      <p className="mt-2 text-sm text-slate-400">
-        Investimento: R$ {metrics.invested.toLocaleString('pt-BR')}
-      </p>
+    <div className="grid grid-cols-3 gap-3 p-4 bg-slate-900 rounded-xl">
+      {/* Grade interativa com detecção de choque de agenda */}
     </div>
   );
 }`,
-    api: `// Backend: API Route com Validação e Caching
-import { Router } from 'express';
-export const router = Router();
-
-router.get('/api/v1/tcmgo/environment', async (req, res) => {
-  const { year = 2024, uf = 'GO' } = req.query;
-  
-  // Consulta otimizada ao banco com agregação
-  const data = await db.municipalities.findMany({
-    where: { state: uf, auditYear: Number(year) },
-    select: { id: true, name: true, budget: true, complianceScore: true },
-    cache: { ttlSeconds: 300 }
-  });
-
-  return res.status(200).json({
-    status: 'success',
-    totalMunicipalities: data.length, // 246 municípios
-    auditedAt: new Date().toISOString(),
-    records: data
-  });
-});`,
-    database: `-- Modelagem Relacional Otimizada
-CREATE TABLE municipal_environment_records (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    municipality_ibge VARCHAR(7) NOT NULL,
-    municipality_name VARCHAR(120) NOT NULL,
-    budget_allocated NUMERIC(15, 2) NOT NULL,
-    compliance_score NUMERIC(5, 2) CHECK (compliance_score BETWEEN 0 AND 100),
-    audited_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    CONSTRAINT fk_municipality FOREIGN KEY (municipality_ibge) 
-      REFERENCES municipalities(ibge_code) ON DELETE RESTRICT
-);
-
-CREATE INDEX idx_env_audit_year ON municipal_environment_records (municipality_ibge, audited_at DESC);`
+    database: `-- Flyway Migration (V1__create_tables.sql - MySQL 8.0)
+CREATE TABLE consultas (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    medico_id BIGINT NOT NULL,
+    paciente_id BIGINT NOT NULL,
+    data_hora DATETIME NOT NULL,
+    motivo_cancelamento VARCHAR(100),
+    PRIMARY KEY (id),
+    CONSTRAINT fk_consultas_medico FOREIGN KEY (medico_id) REFERENCES medicos(id),
+    CONSTRAINT fk_consultas_paciente FOREIGN KEY (paciente_id) REFERENCES pacientes(id),
+    INDEX idx_consultas_data (data_hora, medico_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;`
   };
 
   const handleRunApi = () => {
@@ -68,13 +63,12 @@ CREATE INDEX idx_env_audit_year ON municipal_environment_records (municipality_i
     setTimeout(() => {
       setIsRunning(false);
       setApiResponse({
-        status: 200,
-        latency: '34ms',
-        total: 246,
-        source: 'TCM-GO Portal Cidadão API',
-        message: 'Conexão e payload íntegros. Dados dos 246 municípios validados.'
+        status: 201,
+        latency: '28ms',
+        source: 'Spring Boot 3 REST API (MediClin)',
+        message: 'HTTP 201 CREATED • Agendamento validado pela cadeia de validadores Spring sem choque de horários.'
       });
-    }, 700);
+    }, 600);
   };
 
   const handleCopy = () => {
@@ -93,31 +87,31 @@ CREATE INDEX idx_env_audit_year ON municipal_environment_records (municipality_i
           <div className="h-3 w-3 rounded-full bg-emerald-500/80"></div>
           <span className="ml-2 font-mono text-xs text-slate-400 flex items-center gap-1">
             <Terminal className="h-3.5 w-3.5 text-purple-400" />
-            cezar-stack-env ~/portfolio
+            mediclin-core ~/java17-spring
           </span>
         </div>
 
         {/* Abas */}
         <div className="flex items-center space-x-1 rounded-lg bg-slate-900 p-1 border border-slate-800 text-xs font-mono">
           <button
-            onClick={() => setActiveTab('component')}
+            onClick={() => setActiveTab('java')}
             className={`px-3 py-1 rounded transition-all ${
-              activeTab === 'component'
+              activeTab === 'java'
                 ? 'bg-purple-600 text-white font-medium shadow'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
-            ReactCard.tsx
+            ConsultaController.java
           </button>
           <button
-            onClick={() => setActiveTab('api')}
+            onClick={() => setActiveTab('react')}
             className={`px-3 py-1 rounded transition-all ${
-              activeTab === 'api'
+              activeTab === 'react'
                 ? 'bg-purple-600 text-white font-medium shadow'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
-            apiRouter.ts
+            GradeAgendamento.jsx
           </button>
           <button
             onClick={() => setActiveTab('database')}
@@ -127,7 +121,7 @@ CREATE INDEX idx_env_audit_year ON municipal_environment_records (municipality_i
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
-            schema.sql
+            V1__tables.sql
           </button>
         </div>
 
@@ -153,9 +147,9 @@ CREATE INDEX idx_env_audit_year ON municipal_environment_records (municipality_i
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-xs text-slate-400">
             <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
-            <span className="font-mono text-emerald-400">Build: Status OK</span>
+            <span className="font-mono text-emerald-400">Spring Boot 3.0: Online</span>
             <span className="text-slate-600">•</span>
-            <span>TypeScript Strict Mode</span>
+            <span>Java 17 / JVM</span>
           </div>
 
           <button
@@ -166,12 +160,12 @@ CREATE INDEX idx_env_audit_year ON municipal_environment_records (municipality_i
             {isRunning ? (
               <span className="flex items-center gap-2">
                 <span className="h-3 w-3 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
-                Executando API...
+                Processando no Spring...
               </span>
             ) : (
               <>
                 <Play className="h-3.5 w-3.5 fill-current" />
-                <span>Simular Chamada da API</span>
+                <span>Testar Endpoint Spring Boot</span>
               </>
             )}
           </button>
@@ -183,7 +177,7 @@ CREATE INDEX idx_env_audit_year ON municipal_environment_records (municipality_i
             <div className="flex items-center justify-between">
               <span className="flex items-center gap-1.5 font-bold">
                 <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                HTTP 200 OK • Latência: {apiResponse.latency}
+                HTTP {apiResponse.status} • Latência: {apiResponse.latency}
               </span>
               <span className="text-slate-400 text-[11px]">{apiResponse.source}</span>
             </div>

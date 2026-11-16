@@ -14,169 +14,151 @@ export const personalInfo = {
 
 export const fullstackData = {
   role: "Desenvolvedor Full Stack",
-  badge: "Frontend, Backend, APIs & Cloud",
+  badge: "Java 17 • Spring Boot 3 • React 18 • Python (FastAPI) • MySQL • Docker",
   accentColor: "purple",
   gradientText: "from-purple-400 via-indigo-300 to-cyan-400",
-  tagline: "Construindo aplicações web completas, escaláveis e com foco em alta performance e experiência do usuário.",
-  headline: "Desenvolvedor Full Stack focado em código limpo, arquitetura moderna e impacto real.",
+  tagline: "Desenvolvedor Full Stack especializado em arquiteturas robustas em Java (Spring Boot) e Python (FastAPI), com interfaces reativas em React e TypeScript.",
+  headline: "Desenvolvedor Full Stack focado em Java, Spring Boot, React, Python e arquiteturas modernas de alta performance.",
   bio: [
-    "Sou desenvolvedor Full Stack com sólida vivência em JavaScript, TypeScript, React, Node.js e Python. Minha abordagem combina rigor arquitetural no backend com interfaces fluidas e acessíveis no frontend.",
-    "Tive papel ativo no desenvolvimento da aba 'Meio Ambiente' no Novo Portal do Cidadão do TCM-GO (Tribunal de Contas dos Municípios de Goiás), criando interfaces para milhões de cidadãos consultarem gastos públicos e políticas municipais em tempo real.",
-    "Além da web tradicional, desenvolvo sistemas inteligentes integrando modelos de Machine Learning (YOLOv8) e visão computacional em interfaces gráficas desktop e APIs modernas."
+    "Sou desenvolvedor Full Stack com sólida vivência no ecossistema Java (Java 17, Spring Boot 3, Spring Security, JPA/Hibernate) e no ecossistema Web (React 18, TypeScript, Tailwind CSS e Vite), além de ampla experiência com Python (FastAPI, PyTorch, OpenCV).",
+    "Sou o autor e arquiteto do MediClin, uma plataforma completa de gestão clínica e hospitalar com backend RESTful em Spring Boot, persistência relacional em MySQL, controle de acesso RBAC, mensageria e SPA responsiva em React em conformidade estrita com LGPD e normas do CFM.",
+    "Também desenvolvi o Cripto EmotionLens, uma solução inovadora de telemetria afetiva e visão computacional em tempo real com FastAPI e React, integrando redes neurais profundas (YOLOv8 e EfficientNet) com arquitetura de criptografia em duas camadas de altíssimo desempenho (latência < 0.3ms)."
   ],
   stats: [
-    { label: "Projetos no GitHub", value: "18+", hint: "Aplicações web, desktop e IA" },
-    { label: "Cidadãos Impactados", value: "100k+", hint: "Via Portal do Cidadão TCM-GO" },
-    { label: "Stack Principal", value: "React & Python", hint: "Full stack do banco à interface" },
+    { label: "Projetos em Produção", value: "MediClin & EmotionLens", hint: "Java Spring Boot & Python FastAPI" },
+    { label: "Repositórios GitHub", value: "18+", hint: "Aplicações web, desktop e APIs" },
+    { label: "Stack Principal", value: "Java & React", hint: "Spring Boot 3, TypeScript & Python" },
     { label: "Disponibilidade", value: "Imediata", hint: "Full-time / Remoto ou Híbrido" }
   ],
   skills: {
     categories: [
       {
-        name: "Frontend Moderno",
+        name: "Backend & Arquitetura (Java & Python)",
         skills: [
-          { name: "React.js", level: "Avançado", badge: "Core" },
-          { name: "TypeScript", level: "Avançado", badge: "Core" },
-          { name: "JavaScript (ES6+)", level: "Avançado", badge: "Core" },
-          { name: "Tailwind CSS", level: "Avançado", badge: "Styling" },
-          { name: "HTML5 / Semântico", level: "Avançado", badge: "Base" },
-          { name: "CSS3 / Flex & Grid", level: "Avançado", badge: "Base" },
-          { name: "Next.js / Vite", level: "Intermediário/Avançado", badge: "Build" },
-          { name: "UI/UX & Responsividade", level: "Avançado", badge: "Design" }
+          { name: "Java 17 & Spring Boot 3", level: "Avançado", badge: "Core Backend" },
+          { name: "Spring Security & JWT / RBAC", level: "Avançado", badge: "Security" },
+          { name: "Spring Data JPA & Hibernate", level: "Avançado", badge: "ORM" },
+          { name: "Python (FastAPI & Flask)", level: "Avançado", badge: "APIs & IA" },
+          { name: "Arquitetura RESTful & Swagger", level: "Avançado", badge: "Design" },
+          { name: "Testes (JUnit 5 & Mockito)", level: "Intermediário/Avançado", badge: "Quality" }
         ]
       },
       {
-        name: "Backend & APIs",
+        name: "Frontend Moderno & Interfaces",
         skills: [
-          { name: "Node.js & Express", level: "Intermediário/Avançado", badge: "Server" },
-          { name: "Python (FastAPI / Flask)", level: "Avançado", badge: "Server" },
-          { name: "RESTful APIs", level: "Avançado", badge: "Architecture" },
-          { name: "Autenticação (JWT / OAuth)", level: "Intermediário", badge: "Security" },
-          { name: "Integração de Modelos IA", level: "Avançado", badge: "AI" }
+          { name: "React 18 & Vite", level: "Avançado", badge: "Core Frontend" },
+          { name: "TypeScript & JavaScript ES6+", level: "Avançado", badge: "Language" },
+          { name: "Tailwind CSS & CSS Grid/Flex", level: "Avançado", badge: "Styling" },
+          { name: "Gerenciamento de Estado & Hooks", level: "Avançado", badge: "State" },
+          { name: "Integração de APIs REST", level: "Avançado", badge: "Integration" },
+          { name: "UI/UX & Responsividade Fluida", level: "Avançado", badge: "UX" }
         ]
       },
       {
-        name: "Bancos de Dados & Cloud",
+        name: "Bancos de Dados, DevOps & IA",
         skills: [
-          { name: "PostgreSQL", level: "Intermediário/Avançado", badge: "Relacional" },
-          { name: "MySQL", level: "Avançado", badge: "Relacional" },
-          { name: "Modelagem Relacional", level: "Avançado", badge: "Data" },
-          { name: "Git & GitHub CI", level: "Avançado", badge: "DevOps" },
-          { name: "Docker", level: "Intermediário", badge: "Container" }
+          { name: "MySQL 8.0 & PostgreSQL", level: "Avançado", badge: "Databases" },
+          { name: "Flyway Migrations", level: "Avançado", badge: "DB Migrations" },
+          { name: "Docker & Docker Compose", level: "Avançado", badge: "DevOps" },
+          { name: "Git & GitHub CI / Actions", level: "Avançado", badge: "CI/CD" },
+          { name: "Visão Computacional (YOLOv8 & OpenCV)", level: "Avançado", badge: "AI/ML" }
         ]
       }
     ]
   },
   projects: [
     {
-      id: "tcmgo-portal",
-      title: "Portal do Cidadão TCM-GO (Módulo Meio Ambiente)",
-      category: "Web Governamental",
-      description: "Participação no desenvolvimento frontend da aba 'Meio Ambiente' no Novo Portal do Cidadão do Tribunal de Contas dos Municípios de Goiás. Interface acessível e responsiva para consulta de políticas públicas e transparência orçamentária dos 246 municípios.",
-      tags: ["React", "TypeScript", "Tailwind CSS", "REST API", "Figma", "Governança"],
+      id: "mediclin",
+      title: "MediClin · Gestão Clínica & Hospitalar Integrada",
+      category: "Full Stack Empresarial / Saúde",
+      description: "Plataforma completa de gestão clínica combinando API REST em Java 17 com Spring Boot 3 e SPA reativa em React 18 com Vite. Controle cadastral de médicos/pacientes, agendamento com grade interativa dupla (calendário e tabela), validações anti-choque de horários, Prontuário Eletrônico do Paciente (PEP), emissão de atestados e receitas em PDF timbrado e conformidade estrita com LGPD e CFM.",
+      tags: ["Java 17", "Spring Boot 3", "React 18", "MySQL 8.0", "Docker", "JWT / RBAC", "Flyway", "Swagger"],
       featured: true,
-      metrics: "Milhares de acessos diários | 246 municípios | Interface 100% responsiva",
-      github: null,
-      demo: "https://portalcidadao.tcmgo.tc.br/new-portal-cidadao/",
+      metrics: "Arquitetura Hexagonal | Docker Compose | Validações de Regra de Negócio | LGPD Compliant",
+      github: "https://github.com/cezarbtw/Projeto-Medicos",
+      demo: null,
       caseStudy: {
-        problem: "Os cidadãos e auditores precisavam de uma ferramenta transparente, intuitiva e de rápida navegação para consultar investimentos e relatórios de conformidade ambiental de todos os municípios de Goiás.",
-        solution: "Construção de componentes modulares em React com TypeScript, integrando filtros avançados de busca, tabelas dinâmicas de despesas públicas, consumo otimizado de APIs governamentais e conformidade com padrões de acessibilidade para órgãos de controle externo.",
-        techStackDetails: "Frontend em React com TypeScript para tipagem estrita de payloads da API governamental, estilização moderna e design system alinhado ao padrão do TCM-GO.",
-        results: "Entrega do módulo em produção no ar, facilitando a auditoria cívica e elevando os índices de transparência pública estadual."
+        problem: "Clínicas médicas sofrem com perda de dados, atrasos em agendas de papel e riscos de segurança da informação no manuseio de dados de saúde de pacientes.",
+        solution: "Construção de uma solução full stack corporativa: backend em Java com Spring Boot 3 estruturado em camadas de serviço, repositório e DTOs, com segurança via Spring Security e JWT, associado a um frontend reativo em React com grade interativa de agendamentos e prontuário digital.",
+        techStackDetails: "Java 17, Spring Boot 3, Spring Data JPA, Flyway para migrações versionadas, banco relacional MySQL 8.0, geração de relatórios com iText/PDF, interface SPA em React 18 e empacotamento com Docker Compose.",
+        results: "Sistema pronto para produção com autenticação granular por perfil (ADMIN, MÉDICO, RECEPÇÃO), eliminação total de conflitos de agendamento e rastreabilidade total de prontuários médicos."
+      }
+    },
+    {
+      id: "cripto-emotion-lens",
+      title: "Cripto EmotionLens (Telemetria Afetiva & Criptografia)",
+      category: "Full Stack & Visão Computacional",
+      description: "Plataforma inteligente de reconhecimento de expressões faciais e análise temporal segundo a segundo em vídeos, com pipeline de visão computacional (YOLOv8-face e HSEmotion EfficientNet) e arquitetura de criptografia em duas camadas (MCE autoral + algoritmos de bloco) para proteção de dados biométricos sensíveis em conformidade com a LGPD.",
+      tags: ["Python", "FastAPI", "React 18", "PyTorch", "YOLOv8", "OpenCV", "SQL Server", "Criptografia"],
+      featured: true,
+      metrics: "Inferência em tempo real | Latência de criptografia < 0.3ms | Filtro CLAHE anti-ruído",
+      github: "https://github.com/cezarbtw",
+      demo: null,
+      caseStudy: {
+        problem: "Processar telemetria biométrica facial de alta dimensionalidade em tempo real sem comprometer a privacidade do usuário nem estourar a latência aceitável de aplicações web.",
+        solution: "Desenvolvimento de um pipeline assíncrono em Python com FastAPI conectado a modelos de deep learning otimizados, com normalização de iluminação adaptativa (CLAHE) e camada proprietária de criptografia rápida que ofusca os dados biométricos antes da persistência no banco.",
+        techStackDetails: "FastAPI no backend para endpoints assíncronos de alta vazão, React 18 no frontend com gráficos de telemetria afetiva segundo a segundo, PyTorch/YOLOv8 para detecção facial e SQL Server para persistência segura.",
+        results: "Execução comprovada com tempo mediano de criptografia de 0,22 ms por ciclo, proteção rigorosa contra vazamento biométrico e dashboard interativo fluido."
       }
     },
     {
       id: "detector-rachaduras",
       title: "Detector de Rachaduras com YOLOv8 & PyQt5",
       category: "Desktop & Visão Computacional",
-      description: "Software para detecção e segmentação automática de fissuras em superfícies e estruturas da construção civil utilizando aprendizado profundo e visão computacional.",
+      description: "Software para detecção, análise e segmentação automática de fissuras estruturais na construção civil utilizando redes neurais convolucionais profundas e interface nativa em PyQt5.",
       tags: ["Python", "YOLOv8", "PyQt5", "OpenCV", "Deep Learning", "NumPy"],
       featured: true,
-      metrics: "Inferência em tempo real | Segmentação precisa de pixels | Interface Desktop nativa",
+      metrics: "Segmentação de pixels em tempo real | Interface Desktop | Diagnóstico estrutural",
       github: "https://github.com/cezarbtw/Detector-de-Rachaduras",
       demo: null,
       caseStudy: {
-        problem: "Inspeções manuais de patologias em estruturas de concreto são lentas, subjetivas e suscetíveis a falhas humanas que podem comprometer a segurança da infraestrutura.",
-        solution: "Desenvolvimento de uma aplicação desktop em Python integrando o modelo de ponta YOLOv8 para segmentação de instâncias, com interface gráfica desenvolvida em PyQt5 permitindo upload de fotos/vídeos e exibição imediata das áreas com defeito.",
-        techStackDetails: "Treinamento e inferência YOLOv8, pré-processamento de imagens com OpenCV, backend lógico em Python e GUI moderna com PyQt5.",
-        results: "Automatização de diagnósticos estruturais com alta precisão e geração instantânea de relatórios visuais para engenheiros e inspetores."
-      }
-    },
-    {
-      id: "projeto-medicos",
-      title: "Projeto Médicos (Sistema Clínico Full Stack)",
-      category: "SaaS / Full Stack",
-      description: "Plataforma completa para gestão de clínicas médicas, com agendamento online de consultas, prontuário eletrônico e painel administrativo para profissionais da saúde.",
-      tags: ["JavaScript", "React", "Node.js", "Express", "MySQL", "REST API"],
-      featured: true,
-      metrics: "Autenticação segura | Gestão de agendas em tempo real | CRUD completo de prontuários",
-      github: "https://github.com/cezarbtw/Projeto-Medicos",
-      demo: null,
-      caseStudy: {
-        problem: "Consultórios médicos enfrentavam desorganização em agendas de papel e atrasos no atendimento pela falta de um sistema integrado e acessível.",
-        solution: "Desenvolvimento full stack com frontend interativo em React e API robusta em Node.js/Express, com modelagem relacional em MySQL para gerenciar médicos, pacientes e consultas.",
-        techStackDetails: "Frontend SPA reativo, backend RESTful com validações rigorosas e persistência em banco relacional estruturado.",
-        results: "Redução no atrito de agendamentos e centralização do histórico médico em uma única tela fluida."
-      }
-    },
-    {
-      id: "emotion-dashboard",
-      title: "Emotion Dashboard",
-      category: "Frontend UI/UX",
-      description: "Dashboard interativo e responsivo focado em microinterações, estilização moderna e componentes de métricas visuais.",
-      tags: ["JavaScript", "CSS3 Moderno", "HTML5", "UI/UX", "Data Visualization"],
-      featured: false,
-      metrics: "Design 100% fluído | Animações CSS puras | Alto desempenho de renderização",
-      github: "https://github.com/cezarbtw/emotion-dashboard",
-      demo: null,
-      caseStudy: {
-        problem: "Demonstrar domínio avançado de CSS moderno, microinterações e hierarquia visual sem depender de bibliotecas pesadas de terceiros.",
-        solution: "Criação de componentes ricos com CSS Grid, Flexbox, custom properties e transições refinadas para exibição de métricas e status.",
-        techStackDetails: "HTML5 semântico, arquitetura modular de CSS e JavaScript vanilla para interatividade rápida.",
-        results: "Interface de alta fidelidade com nota máxima em métricas de performance (Core Web Vitals)."
+        problem: "Inspeções manuais de patologias em obras civis são demoradas, subjetivas e dependem de laudos visuais propensos a falhas de estimativa.",
+        solution: "Desenvolvimento de software desktop com Python e PyQt5 conectado ao modelo de segmentação YOLOv8, permitindo carregar imagens ou feeds de vídeo e obter a marcação exata da fissura e estimativa dimensional.",
+        techStackDetails: "Python, YOLOv8, OpenCV para filtros de contraste morfológico e PyQt5 para interface intuitiva com exportação de relatórios.",
+        results: "Geração instantânea de diagnósticos de integridade para laudos periciais de engenharia."
       }
     },
     {
       id: "chatbot-meio-ambiente",
       title: "ChatBot Meio Ambiente",
       category: "AI & Chatbot",
-      description: "Assistente virtual desenvolvido em Python para tirar dúvidas da população sobre legislação ambiental, coleta seletiva e ações sustentáveis.",
+      description: "Assistente conversacional desenvolvido em Python para triagem de dúvidas da população sobre legislação ambiental, coleta seletiva e normativas de preservação.",
       tags: ["Python", "NLP", "Automação", "Chatbot"],
       featured: false,
-      metrics: "Respostas instantâneas | Triagem de dúvidas comuns | Arquitetura modular",
+      metrics: "Respostas instantâneas | Mapeamento de intenções | Arquitetura modular",
       github: "https://github.com/cezarbtw/ChatBot-Meio-Ambiente",
       demo: null,
       caseStudy: {
-        problem: "Cidadãos tinham dificuldade em localizar normativas e informações práticas sobre preservação ambiental nos portais municipais.",
-        solution: "Criação de um bot conversacional em Python que processa a linguagem do usuário e orienta sobre diretrizes e fiscalização ambiental de forma didática.",
-        techStackDetails: "Python, heurísticas de correspondência e processamento de texto com respostas estruturadas.",
-        results: "Canal direto e simplificado de orientação cívico-ambiental."
+        problem: "Dificuldade do cidadão em localizar rapidamente normativas e diretrizes de sustentabilidade em portais públicos.",
+        solution: "Desenvolvimento de um bot em Python com mapeamento de intenções e respostas orientadas para perguntas frequentes.",
+        techStackDetails: "Python, manipulação de texto, correspondência heurística e arquitetura desacoplada.",
+        results: "Canal simplificado de atendimento cívico-ambiental."
       }
     }
   ],
   experiences: [
     {
-      role: "Desenvolvedor de Software (Frontend & Integração)",
-      company: "TCM-GO (Tribunal de Contas dos Municípios de Goiás)",
-      period: "Projeto Portal do Cidadão",
-      type: "Setor Público / Governança",
-      description: "Atuação no desenvolvimento e entrega da aba 'Meio Ambiente' no Novo Portal do Cidadão, conectando os dados governamentais dos 246 municípios goianos a uma interface web intuitiva para controle social.",
+      role: "Arquiteto de Software & Desenvolvedor Full Stack",
+      company: "MediClin & Cripto EmotionLens (Projetos de Destaque)",
+      period: "2024 - Presente",
+      type: "Engenharia de Software & IA",
+      description: "Concepção, arquitetura e desenvolvimento integral de sistemas corporativos de ponta a ponta em Java e Python.",
       achievements: [
-        "Construção de componentes reativos e acessíveis em React e TypeScript para visualização de gastos públicos ambientais.",
-        "Integração contínua com APIs REST e tratamento de estados assíncronos para garantir carregamento instantâneo de dados.",
-        "Foco em responsividade móvel e conformidade com diretrizes de usabilidade governamental (e-MAG / acessibilidade digital)."
+        "Desenvolvimento do MediClin: API robusta em Java 17 / Spring Boot 3 e frontend em React 18, com validações de negócio, agendamento de consultas, prontuário eletrônico e conformidade LGPD.",
+        "Desenvolvimento do Cripto EmotionLens: pipeline em FastAPI e React 18 com redes neurais (YOLOv8 e EfficientNet) e camada autoral de criptografia de alto desempenho (0.22ms).",
+        "Implementação de boas práticas de engenharia de software: Clean Architecture, Docker Compose, Flyway migrations e testes automatizados."
       ]
     },
     {
-      role: "Desenvolvedor Full Stack & Projetos Autônomos",
-      company: "GitHub / Open Source",
+      role: "Desenvolvedor Open Source & Software Engineer",
+      company: "GitHub / Portfólio Pessoal",
       period: "Constante",
-      type: "Projetos Pessoais & Open Source",
-      description: "Desenvolvimento de soluções web completas, ferramentas desktop com Python e algoritmos de visão computacional aplicados.",
+      type: "Engenharia & Pesquisa Aplicada",
+      description: "Criação e manutenção de repositórios cobrindo ecossistemas Java, React, TypeScript, Python e Visão Computacional.",
       achievements: [
-        "Criação e manutenção de 18+ repositórios públicos cobrindo JavaScript, TypeScript, Python, MySQL e Visão Computacional.",
-        "Implementação de pipelines de inferência de IA integrados a interfaces desktop profissionais (PyQt5 + YOLOv8).",
-        "Arquitetura de sistemas médicos e dashboards analíticos com foco em boas práticas e modularidade."
+        "18+ repositórios públicos cobrindo desde microsserviços em Spring Boot até aplicações desktop em Python/PyQt5.",
+        "Integração contínua de modelos de IA com interfaces de usuário intuitivas e bancos de dados relacionais estruturados.",
+        "Padronização de código limpo, documentação detalhada (Swagger / OpenAPI) e conteinerização."
       ]
     }
   ]

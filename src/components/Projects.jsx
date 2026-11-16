@@ -11,14 +11,14 @@ export default function Projects() {
   const filterOptions = [
     { id: 'all', label: 'Todos os Projetos' },
     { id: 'featured', label: 'Em Destaque' },
-    { id: 'tcmgo', label: 'Governança & TCM-GO' },
-    { id: 'ai', label: 'IA & Desktop' },
+    { id: 'java', label: 'Java & Spring Boot' },
+    { id: 'python', label: 'Python & IA / Visão' },
   ];
 
   const filteredProjects = fullstackData.projects.filter((proj) => {
     if (selectedFilter === 'featured') return proj.featured;
-    if (selectedFilter === 'tcmgo') return proj.id.includes('tcmgo');
-    if (selectedFilter === 'ai') return proj.tags.some(t => ['Python', 'YOLOv8', 'NLP', 'PyQt5'].includes(t));
+    if (selectedFilter === 'java') return proj.tags.some(t => t.includes('Java') || t.includes('Spring'));
+    if (selectedFilter === 'python') return proj.tags.some(t => ['Python', 'YOLOv8', 'NLP', 'FastAPI'].includes(t));
     return true;
   });
 
@@ -34,10 +34,10 @@ export default function Projects() {
               <span>Portfólio de Projetos</span>
             </div>
             <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl tracking-tight">
-              Aplicações Web, Sistemas & AI
+              Sistemas Empresariais & Plataformas Web
             </h2>
             <p className="mt-2 text-sm text-slate-400 max-w-xl">
-              Projetos arquitetados com foco em resolver problemas reais de cidadãos, clínicas e infraestrutura.
+              Aplicações completas com backend robusto, arquitetura orientada a serviços, persistência relacional e interfaces reativas.
             </p>
           </div>
 
@@ -60,7 +60,7 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
@@ -142,7 +142,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noreferrer"
                       className="p-1.5 rounded-lg text-white transition-colors bg-purple-600 hover:bg-purple-500"
-                      title="Abrir Demonstração / Portal"
+                      title="Abrir Demonstração"
                     >
                       <ExternalLink className="h-4 w-4" />
                     </a>

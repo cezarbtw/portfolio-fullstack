@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Code2, CheckCircle } from 'lucide-react';
+import { ArrowRight, Sparkles, CheckCircle } from 'lucide-react';
 import { personalInfo, fullstackData } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import InteractiveDevHero from './InteractiveDevHero';
@@ -34,12 +34,12 @@ export default function Hero() {
               {fullstackData.tagline}
             </p>
 
-            {/* Quick Proof Badge: TCM-GO */}
+            {/* Quick Proof Badge: MediClin & Cripto EmotionLens */}
             <div className="rounded-xl border border-slate-800/90 bg-slate-900/60 p-3.5 text-xs text-slate-300 flex items-start gap-3">
               <CheckCircle className="h-4 w-4 shrink-0 mt-0.5 text-purple-400" />
               <div>
-                <strong className="text-white">Destaque de Produção (TCM-GO):</strong>{' '}
-                Atuei na construção da aba 'Meio Ambiente' no Novo Portal do Cidadão, desenvolvendo componentes frontend em React e TypeScript para transparência pública dos 246 municípios goianos.
+                <strong className="text-white">Destaques em Engenharia de Software:</strong>{' '}
+                Arquiteto do <span className="text-purple-300 font-semibold">MediClin</span> (API completa em Java 17 com Spring Boot 3 + React 18, MySQL e Docker) e do <span className="text-purple-300 font-semibold">Cripto EmotionLens</span> (FastAPI, React 18, PyTorch, YOLOv8 e criptografia de alto desempenho).
               </div>
             </div>
 
@@ -49,7 +49,7 @@ export default function Hero() {
                 href="#projects"
                 className="flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:scale-105 active:scale-95 bg-gradient-to-r from-purple-600 to-indigo-600 shadow-purple-600/25"
               >
-                <span>Explorar Projetos</span>
+                <span>Ver Projetos em Produção</span>
                 <ArrowRight className="h-4 w-4" />
               </a>
 
@@ -93,7 +93,7 @@ export default function Hero() {
               key={idx}
               className="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4 transition-all hover:border-slate-700 hover:bg-slate-900/60"
             >
-              <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              <div className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
                 {stat.value}
               </div>
               <div className="mt-1 text-xs font-semibold text-slate-300">
