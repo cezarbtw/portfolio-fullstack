@@ -25,7 +25,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-16 border-t border-slate-800/80 bg-slate-950">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
@@ -47,11 +47,10 @@ export default function Projects() {
               <button
                 key={filter.id}
                 onClick={() => setSelectedFilter(filter.id)}
-                className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition-all ${
-                  selectedFilter === filter.id
-                    ? 'bg-purple-600 text-white shadow'
-                    : 'text-slate-400 hover:text-slate-200'
-                }`}
+                className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition-all ${selectedFilter === filter.id
+                  ? 'bg-purple-600 text-white shadow'
+                  : 'text-slate-400 hover:text-slate-200'
+                  }`}
               >
                 {filter.label}
               </button>
@@ -64,11 +63,10 @@ export default function Projects() {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className={`group relative flex flex-col justify-between rounded-2xl border bg-slate-900/60 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
-                project.featured
-                  ? 'border-purple-500/40 hover:border-purple-500/80 bg-gradient-to-b from-purple-950/20 to-slate-900/60'
-                  : 'border-slate-800/80 hover:border-slate-700'
-              }`}
+              className={`group relative flex flex-col justify-between rounded-2xl border bg-slate-900/60 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${project.featured
+                ? 'border-purple-500/40 hover:border-purple-500/80 bg-gradient-to-b from-purple-950/20 to-slate-900/60'
+                : 'border-slate-800/80 hover:border-slate-700'
+                }`}
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">

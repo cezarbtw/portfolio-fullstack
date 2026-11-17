@@ -11,13 +11,13 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-purple-600/15 via-indigo-500/10 to-cyan-500/10 blur-[130px] pointer-events-none -z-10"></div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
         {/* Hero Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column: Headlines & CTA */}
           <div className="lg:col-span-6 space-y-6">
-            
+
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/90 px-3.5 py-1 text-xs font-medium text-slate-300 shadow-sm">
               <Sparkles className="h-3.5 w-3.5 text-purple-400" />
               <span>{fullstackData.badge}</span>

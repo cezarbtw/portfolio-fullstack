@@ -6,7 +6,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-16 border-t border-slate-800/80 bg-slate-950/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900 px-3 py-1 text-xs font-semibold text-slate-400">
