@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Abraão Cezar Inácio",
   shortName: "Abraão Cezar",
   location: "Goiás, Brasil",
-  email: "abraao.cezar.dev@gmail.com",
+  email: "abraaocezarIL@outlook.com",
   phone: "+55 (62) 98280-1501",
   whatsapp: "5562982801501",
   github: "https://github.com/cezarbtw",
